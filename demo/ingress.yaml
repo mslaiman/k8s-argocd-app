@@ -6,7 +6,9 @@ metadata:
   name: nginx-ingress
   namespace: k8s-formation
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
  # annotations:
   #  cert-manager.io/cluster-issuer: letsencrypt-staging
 spec:
