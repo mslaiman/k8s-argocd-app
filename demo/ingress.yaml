@@ -1,6 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  labels:
+    run: nginx
   name: nginx-ingress
   namespace: k8s-formation
  # annotations:
