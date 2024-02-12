@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: k8s-formation
+ # annotations:
+  #  cert-manager.io/cluster-issuer: letsencrypt-staging
+spec:
+  rules:
+  - host: labs.cadmus-it.com 
+    http:
+      paths:
+      - backend:
+          service:
+            name: nginx
+            port:
+              number: 80 
+        path: /
+        pathType: Prefix
+  # tls:
+  # - hosts:
+  #   - labs.cadmus-it.com
+  #   secretName: letsencrypt-staging-secret # secret name, same as the privateKeySecretRef in the (Cluster)Issuer
