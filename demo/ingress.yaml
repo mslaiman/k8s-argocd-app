@@ -5,6 +5,8 @@ metadata:
     run: nginx
   name: nginx-ingress
   namespace: k8s-formation
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
  # annotations:
   #  cert-manager.io/cluster-issuer: letsencrypt-staging
 spec:
