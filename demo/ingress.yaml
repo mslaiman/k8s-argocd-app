@@ -29,4 +29,8 @@ spec:
   - hosts:
     - labs.cadmus-it.com
     secretName: nginx-tls
+  status:
+    loadBalancer:
+      ingress:
+      - hostname: labs.cadmus-it.com
 
