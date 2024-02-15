@@ -11,7 +11,7 @@ metadata:
     # nginx.ingress.kubernetes.io/rewrite-target: /
     #nginx.ingress.kubernetes.io/ssl-redirect: "false"
     cert-manager.io/cluster-issuer: letsencrypt-prod
-   
+    nginx.ingress.kubernetes.io/load-balancer-ip: "123.45.67.89"
 spec:
   ingressClassName: nginx
   rules:
@@ -29,8 +29,5 @@ spec:
   - hosts:
     - labs.cadmus-it.com
     secretName: nginx-tls
-  status:
-    loadBalancer:
-      ingress:
-      - hostname: labs.cadmus-it.com
+
 
