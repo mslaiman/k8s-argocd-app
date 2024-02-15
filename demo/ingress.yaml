@@ -25,11 +25,11 @@ spec:
               number: 8080
         path: /
         pathType: Prefix
-  status:
-   loadBalancer:
-     ingress:
-     - hostname: placeholder
   tls:
   - hosts:
     - labs.cadmus-it.com
     secretName: nginx-tls
+status:
+   loadBalancer:
+     ingress:
+     - hostname: labs.cadmus-it.com 
