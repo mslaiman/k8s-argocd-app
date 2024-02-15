@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    run: nginx
+  name: nginx-ingress
+  namespace: k8s-formation
+  annotations:
+    #kubernetes.io/ingress.class: nginx
+    #nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+    #nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: labs.cadmus-it.com 
+    http:
+      paths:
+      - backend:
+          service:
+            name: nginx
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - labs.cadmus-it.com
+    secretName: nginx-tls
