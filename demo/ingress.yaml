@@ -25,6 +25,10 @@ spec:
               number: 8080
         path: /
         pathType: Prefix
+  status:
+   loadBalancer:
+     ingress:
+     - hostname: placeholder
   tls:
   - hosts:
     - labs.cadmus-it.com
