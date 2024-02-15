@@ -11,7 +11,7 @@ metadata:
     # nginx.ingress.kubernetes.io/rewrite-target: /
     #nginx.ingress.kubernetes.io/ssl-redirect: "false"
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    argoproj.io/expect-ingresses: "false"
+   
 spec:
   ingressClassName: nginx
   rules:
