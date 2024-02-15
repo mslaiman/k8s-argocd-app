@@ -14,4 +14,3 @@ spec:
     name: http
   selector:
     run: nginx
-  type: LoadBalancer
