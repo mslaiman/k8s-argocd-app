@@ -6,9 +6,8 @@ metadata:
   name: nginx-ingress
   namespace: k8s-formation
   annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/auth-url: "http://oauth.cadmus-it.com/oauth2/auth"
-    nginx.ingress.kubernetes.io/auth-signin: "http://oauth.cadmus-it.com/oauth2/start"
+   # nginx.ingress.kubernetes.io/auth-url: "http://oauth.cadmus-it.com/oauth2/auth"
+   # nginx.ingress.kubernetes.io/auth-signin: "http://oauth.cadmus-it.com/oauth2/start"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
