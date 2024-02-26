@@ -10,8 +10,8 @@ metadata:
     #nginx.ingress.kubernetes.io/proxy-body-size: "0"
     # nginx.ingress.kubernetes.io/rewrite-target: /
     #nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/auth-url: "http://oauth.cadmus-it.com/oauth2/auth"
-    nginx.ingress.kubernetes.io/auth-signin: "http://oauth.cadmus-it.com/oauth2/start"
+    nginx.org/auth-url: "http://oauth.cadmus-it.com/oauth2/auth"
+    nginx.org/auth-signin: "http://oauth.cadmus-it.com/oauth2/start"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
